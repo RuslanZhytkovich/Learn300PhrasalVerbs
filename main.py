@@ -46,18 +46,29 @@ while((len(list_of_used_word) != len(mydict)) and exit == False):
 
         print(f'Введите правильное значение слова {rus_word}: ')
         print(f'1){temp_list[0]}\n2){temp_list[1]}\n3){temp_list[2]}\n4){temp_list[3]}\n5)exit - для завершения программы')
-
         a = input("Ваш ответ: ")
+        correct_input = True
+        while(a not in temp_list):
+            if (a not in temp_list):
+                correct_input = False
+            if(correct_input == False):
+                a = input("Введите корректный ответ: ")
+            if (a == 'exit'):
+                exit = True
+                break
+            elif (a == eng_word):
+                clear()
+                print("Верно\n\n")
+                correct_answers += 1
 
-        if (a == 'exit'):
-            break
-        elif (a == eng_word):
-            clear()
-            print("Верно\n\n")
-            correct_answers += 1
-        else:
-            print("Неверно, правильный ответ: ", eng_word, '\n\n')
-            incorrect_answers += 1
+            elif (a in temp_list and a != eng_word):
+                print("Неверно, правильный ответ: ", eng_word, '\n\n')
+                incorrect_answers += 1
+
+
+
+
+
 
 clear()
 if (correct_answers == 0 and iterations > 5):
