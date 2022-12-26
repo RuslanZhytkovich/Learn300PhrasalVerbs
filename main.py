@@ -46,13 +46,11 @@ while((len(list_of_used_word) != len(mydict)) and exit == False):
 
         print(f'Введите правильное значение слова {rus_word}: ')
         print(f'1){temp_list[0]}\n2){temp_list[1]}\n3){temp_list[2]}\n4){temp_list[3]}\n5)exit - для завершения программы')
-        a = input("Ваш ответ: ")
-        correct_input = True
+
+        a = ""
         while(a not in temp_list):
-            if (a not in temp_list):
-                correct_input = False
-            if(correct_input == False):
-                a = input("Введите корректный ответ: ")
+            a = input("Ваш ответ: ")
+
             if (a == 'exit'):
                 exit = True
                 break
