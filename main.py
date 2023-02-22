@@ -10,14 +10,14 @@ def clear():
 
 correct_answers = 0
 incorrect_answers = 0
-
+iterations = 0     # чтобы знать сколько раз срабатывал цикл
 list_of_used_word =[]                  # список для использованных слов
 lst = list(mydict.items())             # cписок из ключей и значений словаря
 exit = False
 
 name = input('Добро пожаловать! Введите свое имя: ')
 clear()
-iterations = 0     # чтобы знать сколько раз срабатывал цикл
+
 
 while((len(list_of_used_word) != len(mydict)) and exit == False):
     temp_list = []                    # список для вариантов ответа
