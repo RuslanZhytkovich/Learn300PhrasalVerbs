@@ -43,7 +43,7 @@ while((len(list_of_used_word) != len(mydict)) and exit == False):
 
         iterations += 1
 
-
+        print(f'Вопрос номер: {iterations}')
         print(f'Введите правильное значение слова {rus_word}: ')
         print(f'1){temp_list[0]}\n2){temp_list[1]}\n3){temp_list[2]}\n4){temp_list[3]}\n5)exit - для завершения программы')
 
@@ -73,11 +73,11 @@ if (correct_answers == 0 and iterations > 5):
     print(f'{name}! Вы ни ответили правильно не на один вопрос! Пора браться за ум.')
 
 else:
-    print(f'{name}! Ваш результат {correct_answers} из {iterations-1}.')
+    print(f'{name}! Ваш результат {correct_answers} из {iterations}.')
 
 
 file_write = open('results.txt','a',encoding='utf-8')
-file_write.write(f'\nРезультат пользователя "{name}" {correct_answers} из {iterations-1}')
+file_write.write(f'\nРезультат пользователя "{name}" {correct_answers} из {iterations}')
 
 
 

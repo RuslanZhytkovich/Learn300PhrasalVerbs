@@ -3,7 +3,7 @@ def read_file(filename):
 
     eng_alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-    file = open('words.txt', encoding='utf-8')
+    file = open(filename, encoding='utf-8')
     lst = []
     for row in file:
         lst.append(row.replace('\n', ''))
