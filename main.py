@@ -2,7 +2,7 @@ import random
 from files import read_file
 
 
-mydict = read_file('words.txt')
+mydict = read_file('words2.txt')
 
 
 def clear():
@@ -60,7 +60,8 @@ while((len(list_of_used_word) != len(mydict)) and exit == False):
                 correct_answers += 1
 
             elif (a in temp_list and a != eng_word):
-                print("Неверно, правильный ответ: ", eng_word, '\n\n')
+                print("Неверно, правильный ответ: ", eng_word)
+                print('Вы выбрали слово: ', a,' - ',mydict[a], '\n\n')
                 incorrect_answers += 1
 
 
